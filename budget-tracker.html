@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budget Tracker</title>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h2>Personal Budget Tracker</h2>
+  <form id="budgetForm">
+    <input type="number" id="amount" placeholder="Amount" required><br>
+    <input type="text" id="category" placeholder="Category (Food, Travel)" required><br>
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select><br>
+    <button type="submit">Add</button>
+  </form>
+  <div id="budgetList"></div>
+
+  <script src="firebase-config.js"></script>
+  <script src="js/budget-tracker.js"></script>
+</body>
+</html>

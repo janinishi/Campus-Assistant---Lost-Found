@@ -1,0 +1,132 @@
+/* Background gradient with subtle animation */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2980b9);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Main title */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  letter-spacing: 2px;
+}
+/* Form styling */
+form {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  width: 100%;
+  justify-content: center;
+}
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+  flex: 1 1 200px;
+  padding: 12px 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  color: #222;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 8px #ffdd57;
+  background-color: #fff;
+}
+/* Button with cool hover and click animation */
+button {
+  background: #ffdd57;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 221, 87, 0.6);
+  transition: background 0.3s ease, transform 0.15s ease;
+  user-select: none;
+}
+button:hover {
+  background: #fbcf4a;
+  box-shadow: 0 7px 20px rgba(251, 207, 74, 0.8);
+  transform: translateY(-3px);
+}
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 10px rgba(251, 207, 74, 0.6);
+}
+/* Section heading */
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+/* List styling */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  width: 100%;
+}
+li {
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  font-size: 1.1rem;
+  color: #222;
+  transition: background 0.3s ease;
+}
+li:hover {
+  background: rgba(255, 255, 255, 0.35);
+  cursor: default;
+}
+#reported-item-toggle {
+  transition: color 0.3s ease, transform 0.15s ease;
+}
+#reported-item-toggle:hover {
+  color: #3498db;
+}
+#reported-item-toggle:active {
+  transform: scale(0.95);
+}
+/* Additional styles for private info and buttons */
+.private-info {
+  font-style: italic;
+  color: #555;
+  margin-top: 8px;
+}
+.add-info-btn {
+  background-color: yellow;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Campus Assistant - Lost & Found</title>
+<link rel="stylesheet" href="/css/style.css" />
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<!-- Your Firebase config -->
+<script src="firebase-config.js"></script>
+</head>
+<body>
+
+<h1>📌 Campus Assistant - Lost & Found</h1>
+
+<form id="lostForm">
+  <input type="text" id="item" placeholder="What did you lose?" required />
+  <input type="text" id="location" placeholder="Where did you lose it?" required />
+  <input type="file" id="photo" accept="image/*" />
+  <input type="text" id="password" placeholder="Set a password (optional)" />
+  <img id="photoPreview" style="max-width: 100px; margin-top: 10px; display: none;" />
+	<p id="photoNote" style="font-size: 0.9em; color: darkorange;"></p>	 
+  <button type="submit">Submit</button>
+</form>
+
+
+
+<h2 id="reported-item-toggle" style="cursor:pointer; user-select:none;">🔍 Reported Items</h2>
+
+<div id="reported-item-details" style="display:none; margin-top: 10px;">
+  <ul id="itemList"></ul>
+</div>
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
+
